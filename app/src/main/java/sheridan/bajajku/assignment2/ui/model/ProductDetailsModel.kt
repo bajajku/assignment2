@@ -6,11 +6,15 @@ data class ProductDetailsModel(
     val id: Int,
     val name: String ,
     val brand: String,
+    val quantity: Int
+
 ){
     constructor(product: Product): this(
         id = product.id,
         name = product.name,
         brand = product.brand,
+        quantity = product.quantity
+
     )
 
     constructor(): this(Product())

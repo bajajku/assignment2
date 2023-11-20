@@ -37,5 +37,7 @@ interface ProductsRepository {
     suspend fun updateProductBrandById(id: Int, brand: String)
 
     suspend fun updateProductPriorityById(id: Int, priority: Priority)
-    
+
+    suspend fun updateProductQuantityById(id: Int, quantity: Int)
+
 }

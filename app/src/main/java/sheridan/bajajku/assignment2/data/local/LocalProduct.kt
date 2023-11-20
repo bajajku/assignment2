@@ -10,5 +10,6 @@ data class LocalProduct(
     val id: Int = 0,
     val name: String ,
     val brand: String,
-    val priority: Priority
+    val priority: Priority,
+    val quantity: Int
 )

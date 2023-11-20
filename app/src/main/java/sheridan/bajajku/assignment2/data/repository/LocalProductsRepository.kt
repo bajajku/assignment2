@@ -61,18 +61,23 @@ class LocalProductsRepository(
     override suspend fun updateProductPriorityById(id: Int, priority: Priority) {
         externalScope.launch(dispatcher) { productDao.updateProductPriorityById(id, priority) }.join()
     }
+    override suspend fun updateProductQuantityById(id: Int, quantity: Int) {
+        externalScope.launch(dispatcher) { productDao.updateProductQuantityById(id, quantity) }.join()
+    }
 }
 
 fun LocalProduct.toProduct(): Product = Product(
     id = this.id,
     name = this.name,
     brand = this.brand,
-    priority = this.priority
+    priority = this.priority,
+    quantity = this.quantity
 )
 
 fun Product.toLocalProduct(): LocalProduct = LocalProduct(
     id = this.id,
     name = this.name,
     brand = this.brand,
-    priority = this.priority
+    priority = this.priority,
+    quantity = this.quantity
 )

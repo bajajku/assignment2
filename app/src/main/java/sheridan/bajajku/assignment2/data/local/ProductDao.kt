@@ -35,6 +35,9 @@ interface ProductDao {
     @Query("UPDATE products SET priority = :priority WHERE id = :id")
     suspend fun updateProductPriorityById(id: Int, priority: Priority)
 
+    @Query("UPDATE products SET quantity = :quantity WHERE id = :id")
+    suspend fun updateProductQuantityById(id: Int, quantity: Int)
+
     @Delete
     suspend fun deleteProduct(product: LocalProduct)
 
