@@ -13,31 +13,31 @@ import sheridan.bajajku.assignment2.domain.Priority
 interface ProductDao {
 
     @Query("SELECT * from products ORDER BY name ASC")
-    fun getAllItemsStream(): Flow<List<LocalProduct>>
+    fun getAllProductsStream(): Flow<List<LocalProduct>>
 
     @Query("SELECT * from products WHERE id = :id")
-    fun getItemByIdStream(id: Int): Flow<LocalProduct?>
+    fun getProductByIdStream(id: Int): Flow<LocalProduct?>
 
     // Specify the conflict strategy as IGNORE, when the user tries to add an
-    // existing Item into the database Room ignores the conflict.
+    // existing Product into the database Room ignores the conflict.
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insertItem(item: LocalProduct)
+    suspend fun insertProduct(product: LocalProduct)
 
     @Update
-    suspend fun updateItem(item: LocalProduct)
+    suspend fun updateProduct(product: LocalProduct)
 
     @Query("UPDATE products SET name = :name WHERE id = :id")
-    suspend fun updateItemQuantityById(id: Int, name: String)
+    suspend fun updateProductNameById(id: Int, name: String)
 
     @Query("UPDATE products SET brand = :brand WHERE id = :id")
-    suspend fun updateItemSelectedById(id: Int, brand: String)
+    suspend fun updateProductBrandById(id: Int, brand: String)
 
     @Query("UPDATE products SET priority = :priority WHERE id = :id")
-    suspend fun updateItemSelectedById(id: Int, priority: Priority)
+    suspend fun updateProductPriorityById(id: Int, priority: Priority)
 
     @Delete
-    suspend fun deleteItem(item: LocalProduct)
+    suspend fun deleteProduct(product: LocalProduct)
 
     @Query("DELETE FROM products WHERE id = :id")
-    suspend fun deleteItemById(id: Int)
+    suspend fun deleteProductById(id: Int)
 }
