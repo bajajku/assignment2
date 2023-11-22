@@ -12,6 +12,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import sheridan.bajajku.assignment2.ui.common.InventoryTopAppBar
 import sheridan.bajajku.assignment2.ui.model.ProductFormModel
+import sheridan.bajajku.assignment2.ui.navigation.ProductEntryDestination
 import sheridan.bajajku.assignment2.ui.product.form.ProductFormBody
 import sheridan.bajajku.assignment2.ui.product.form.ProductFormUiState
 import sheridan.bajajku.assignment2.ui.theme.InventoryTheme

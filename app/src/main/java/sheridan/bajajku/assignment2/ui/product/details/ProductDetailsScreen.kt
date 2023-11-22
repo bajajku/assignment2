@@ -39,6 +39,7 @@ import sheridan.bajajku.assignment2.domain.Product
 import sheridan.bajajku.assignment2.ui.common.InventoryTopAppBar
 import sheridan.bajajku.assignment2.ui.model.ProductDetailsModel
 import sheridan.bajajku.assignment2.ui.navigation.ProductDetailsDestination
+import sheridan.bajajku.assignment2.ui.theme.InventoryTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -165,8 +166,8 @@ fun ProductDetails(
                 )
             )
             ProductDetailsRow(
-                labelResID = R.string.price,
-                productDetail = product.price,
+                labelResID = R.string.brand,
+                productDetail = product.brand,
                 modifier = Modifier.padding(
                     horizontal = dimensionResource(
                         id = R.dimen
@@ -218,8 +219,8 @@ fun ProductDetailsScreenPreview() {
             ProductDetailsUiState(
                 Product(
                 1,
-                "Pen",
-                6.25,
+                "Shirt",
+                "Nike",
                 0
             )
             ), onSellProduct = {}, onDelete = {})

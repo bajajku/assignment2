@@ -21,4 +21,4 @@ data class ListProductModel(
     constructor(): this(Product())
 }
 
-fun Product.toListItemModel() = ListProductModel(this)
+fun Product.toListProductModel() = ListProductModel(this)
