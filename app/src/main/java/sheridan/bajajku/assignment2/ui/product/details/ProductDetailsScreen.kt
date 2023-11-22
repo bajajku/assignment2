@@ -34,6 +34,7 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import sheridan.bajajku.assignment2.R
 import sheridan.bajajku.assignment2.domain.Product
 import sheridan.bajajku.assignment2.ui.common.InventoryTopAppBar
 import sheridan.bajajku.assignment2.ui.model.ProductDetailsModel
