@@ -5,5 +5,7 @@ data class Product(
     val name: String = "No Name",
     val brand: String = "",
     val quantity: Int = 0,
-    val priority: Priority = Priority.Low
+    val priority: Priority = Priority.Low,
+    val selected: Boolean = false
+
 )
