@@ -10,7 +10,7 @@
     <string name="product_detail_title">Product Details</string>
     <string name="product_entry_title">Add Product</string>
     <string name="product_name_req">Product Name*</string>
-    <string name="product_brand">Product Price*</string>
+    <string name="product_brand">Product Brand*</string>
     <string name="no">No</string>
     <string name="brand">Brand</string>
     <string name="quantity_in_stock">Quantity in stock</string>

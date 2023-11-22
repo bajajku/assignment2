@@ -48,14 +48,13 @@ fun ProductForm(
         OutlinedTextField(
             value = productFormModel.brand,
             onValueChange = onBrandChange,
-            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal),
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text),
             label = { Text(stringResource(R.string.product_brand)) },
             colors = OutlinedTextFieldDefaults.colors(
                 focusedContainerColor = MaterialTheme.colorScheme.secondaryContainer,
                 unfocusedContainerColor = MaterialTheme.colorScheme.secondaryContainer,
                 disabledContainerColor = MaterialTheme.colorScheme.secondaryContainer,
             ),
-            leadingIcon = { Text(Currency.getInstance(Locale.getDefault()).symbol) },
             modifier = Modifier.fillMaxWidth(),
             enabled = enabled,
             singleLine = true
