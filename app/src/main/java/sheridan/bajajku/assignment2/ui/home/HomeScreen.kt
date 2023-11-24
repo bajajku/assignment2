@@ -1,6 +1,7 @@
 package sheridan.bajajku.assignment2.ui.home
 
 import android.annotation.SuppressLint
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -28,6 +29,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
@@ -73,6 +75,7 @@ fun HomeScreen(
                 Icon(
                     imageVector = Icons.Default.Add,
                     contentDescription = stringResource(R.string.product_entry_title)
+
                 )
             }
         },
@@ -130,10 +133,13 @@ private fun InventoryList(
                 onToggleSelect = onToggleSelect,
                 modifier = Modifier
                     .padding(dimensionResource(id = R.dimen.padding_small))
-                    .clickable { onProductClick(product.id) })
+                    .clickable { onProductClick(product.id) }
+
+            )
         }
     }
 }
+
 
 @Composable
 private fun InventoryProduct(
@@ -143,6 +149,7 @@ private fun InventoryProduct(
 ) {
     Card(
         modifier = modifier, elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+        , colors = CardDefaults.cardColors(Color.Cyan)
     ) {
         Row(
             modifier = Modifier.padding(dimensionResource(id = R.dimen.padding_large)),

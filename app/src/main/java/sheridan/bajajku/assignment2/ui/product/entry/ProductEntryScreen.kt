@@ -30,7 +30,7 @@ fun ProductEntryScreen(
             InventoryTopAppBar(
                 title = stringResource(ProductEntryDestination.titleRes),
                 canNavigateBack = canNavigateBack,
-                navigateUp = onNavigateUp
+                navigateUp = onNavigateUp,
             )
         }
     ) { innerPadding ->

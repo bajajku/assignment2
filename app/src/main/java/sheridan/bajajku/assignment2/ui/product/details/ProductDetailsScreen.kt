@@ -30,6 +30,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -106,14 +107,15 @@ private fun ProductDetailsBody(
             shape = MaterialTheme.shapes.small,
             enabled = !productDetailsUiState.outOfStock
         ) {
-            Text(stringResource(R.string.sell))
+            Text(stringResource(R.string.sell), color = Color.White)
         }
         OutlinedButton(
             onClick = { showConfirmationDialog = true },
             shape = MaterialTheme.shapes.small,
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier.fillMaxWidth(),
+
         ) {
-            Text(stringResource(R.string.delete))
+            Text(stringResource(R.string.delete), color = Color.Red)
         }
         if (showConfirmationDialog) {
             DeleteConfirmationDialog(
@@ -134,10 +136,7 @@ fun ProductDetails(
     product: ProductDetailsModel, modifier: Modifier = Modifier
 ) {
     Card(
-        modifier = modifier, colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.primaryContainer,
-            contentColor = MaterialTheme.colorScheme.onPrimaryContainer
-        )
+        modifier = modifier,colors = CardDefaults.cardColors(Color.Cyan)
     ) {
         Column(
             modifier = Modifier
