@@ -33,6 +33,7 @@ fun ProductEditScreen(
             onNameChange = viewModel::onNameChange,
             onBrandChange = viewModel::onBrandChange,
             onQuantityChange = viewModel::onQuantityChange,
+            onPrioritySelected = viewModel::onPrioritySelected,
             onSaveClick = {
                 viewModel.updateProduct()
                 navigateBack()

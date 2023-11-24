@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import sheridan.bajajku.assignment2.R
+import sheridan.bajajku.assignment2.domain.Priority
 
 @Composable
 fun ProductFormBody(
@@ -20,6 +21,8 @@ fun ProductFormBody(
     onBrandChange: (String) -> Unit,
     onQuantityChange: (String) -> Unit,
     onSaveClick: () -> Unit,
+    onPrioritySelected: (Priority) -> Unit,
+
     modifier: Modifier = Modifier
 ) {
     Column(
@@ -31,6 +34,7 @@ fun ProductFormBody(
             onNameChange = onNameChange,
             onBrandChange = onBrandChange,
             onQuantityChange = onQuantityChange,
+            onPrioritySelected = onPrioritySelected,
             modifier = Modifier.fillMaxWidth()
         )
         Button(

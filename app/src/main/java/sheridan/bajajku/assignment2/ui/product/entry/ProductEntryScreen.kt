@@ -39,6 +39,7 @@ fun ProductEntryScreen(
             onNameChange = viewModel::onNameChange,
             onBrandChange = viewModel::onBrandChange,
             onQuantityChange = viewModel::onQuantityChange,
+            onPrioritySelected = viewModel::onPrioritySelected,
             onSaveClick = {
                 viewModel.saveProduct()
                 navigateBack()
@@ -62,7 +63,7 @@ private fun ProductEntryScreenPreview() {
                 )
             ),
             onNameChange = {}, onBrandChange = {}, onQuantityChange = {},
-            onSaveClick = {}
+            onSaveClick = {}, onPrioritySelected = {}
         )
     }
 }

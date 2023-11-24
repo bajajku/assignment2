@@ -13,6 +13,8 @@
     <string name="product_brand">Product Brand*</string>
     <string name="no">No</string>
     <string name="brand">Brand</string>
+    <string name="priority">Priority</string>
+    <string name="select_priority">Select Priority: </string>
     <string name="quantity_in_stock">Quantity in stock</string>
     <string name="in_stock">%d in stock</string>
     <string name="quantity_req">Quantity in Stock*</string>

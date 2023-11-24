@@ -175,6 +175,16 @@ fun ProductDetails(
                     )
                 )
             )
+            ProductDetailsRow(
+                labelResID = R.string.priority,
+                productDetail = product.priority.toString(),
+                modifier = Modifier.padding(
+                    horizontal = dimensionResource(
+                        id = R.dimen
+                            .padding_medium
+                    )
+                )
+            )
         }
 
     }

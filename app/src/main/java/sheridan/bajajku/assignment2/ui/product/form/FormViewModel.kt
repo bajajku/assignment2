@@ -4,6 +4,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
+import sheridan.bajajku.assignment2.domain.Priority
 import sheridan.bajajku.assignment2.ui.model.ProductFormModel
 
 abstract class FormViewModel(
@@ -21,6 +22,11 @@ abstract class FormViewModel(
 
     fun onQuantityChange(newQuantity: String) =
         updateUiState(uiState.productFormModel.copy(quantity = newQuantity))
+
+    fun onPrioritySelected(newPriority: Priority) =
+        updateUiState(uiState.productFormModel.copy(priority = newPriority))
+
+
 
     private fun updateUiState(productFormModel: ProductFormModel) {
         uiState =
